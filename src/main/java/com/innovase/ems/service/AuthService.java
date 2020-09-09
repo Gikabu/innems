@@ -30,8 +30,8 @@ public class AuthService {
         MediaType mediaType = MediaType.parse("application/json");
         RequestBody body = RequestBody.create("{\"ShortCode\":\"842074\", " +
                 "\"ResponseType\":\"Cancelled\", " +
-                "\"ConfirmationURL\":\"http://192.168.100.3:8100/confirmation\"," +
-                "\"ValidationURL\":\"http://192.168.100.3:8100/validation_url\"}", mediaType);
+                "\"ConfirmationURL\":\"http://3.122.177.166:8100/confirmation\"," +
+                "\"ValidationURL\":\"http://3.122.177.166:8100/validation_url\"}", mediaType);
         Request request = new Request.Builder()
                 .url("https://sandbox.safaricom.co.ke/mpesa/c2b/v1/registerurl")
                 .post(body)
