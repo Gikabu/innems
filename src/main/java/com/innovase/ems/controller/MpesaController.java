@@ -20,7 +20,7 @@ public class MpesaController {
     @Autowired
     UnitRepository unitRepository;
 
-    @PostMapping(value = "/validation_url", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/validation_url")
     public MpesaObject validation(@RequestBody MpesaObject object){
         Unit unit = unitRepository.findByName(object.billRefNumber);
         System.out.print(object.transID);
@@ -33,7 +33,7 @@ public class MpesaController {
         }
     }
 
-    @PostMapping(value = "/confirmation", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/confirmation")
     public void confirmation(@RequestBody MpesaObject object){
         Unit unit = unitRepository.findByName(object.billRefNumber);
         System.out.print(object.transID);
