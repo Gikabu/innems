@@ -40,5 +40,6 @@ public class MpesaController {
         long bal = unit.getRent_balance();
         unit.setLast_payment_date(System.currentTimeMillis());
         unit.setRent_balance(bal - Long.parseLong(object.getTransAmount()));
+        unitRepository.save(unit);
     }
 }
